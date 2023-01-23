@@ -1,0 +1,30 @@
+@endpoint = https://7zfp0a98rg.execute-api.us-east-1.amazonaws.com/prod
+@token = eyJraWQiOiIrOEVPcGh6OG9SdG0wTllRUkROdWtneFE4emNxcTZlQittU2JlMnNvd2dNPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0N2QwMWI3NS1lYzUzLTRhMzctYjkwOC0wODUzNmIwMzBjMTciLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV84N2FjVlA5cW8iLCJjbGllbnRfaWQiOiI0NGdyMW02anNrNTV1MmE4YjMxbGxnN24zYyIsIm9yaWdpbl9qdGkiOiJhNzU4ZDkyNi1kN2JlLTRmYWItYTc3Yy1kYmRkYWE1MzdhYWMiLCJldmVudF9pZCI6IjdhMmQ0NmQzLTZiOTItNDc1MC05NDk4LTg3NGM3ODhhMTFjNiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2NzM1MDQxNzIsImV4cCI6MTY3MzUwNzc3MiwiaWF0IjoxNjczNTA0MTcyLCJqdGkiOiI5YzRkM2MxZi0zODdiLTRhZWEtYTQ1Ni0zODMxNjZmMTFhOWQiLCJ1c2VybmFtZSI6InRyb24xIn0.mtcouguDx-ZnbKDLQi5ys-YI66uwAMXGSTn218Mvi26X9N310veiGJNyaG4RTUlLW0AEHw9lGcZxuoHwO4fYIoHCcZjoB6XroGLZ419FUZ507l4n45WYzrERUQOTTQS46FiHmU-MpeUq9BRLS4v7eSAQMHp3yWCSD0260xVoQa9bM8e2-vCEFUI9caN5XS6yRJeDNRTUZvUmihfm-e5_hpuHwCs8ocyjU-G7i8kHdBpiCb9ttuDn3N7-9gDDjMMKzpOLZ04BFSi4Bqr9ZqX3DxNz9e5G7Ennmpvw8xyhdxnJWkKiLJna30Gx1IpuS5ICA8NkUVrBhA5vIGj1URB6jg
+GET {{endpoint}}/hello/
+Authorization: {{token}}
+###
+
+GET {{endpoint}}/spaces
+###
+
+GET {{endpoint}}/spaces?SpaceId=73600115-77a2-42bb-8c53-d8329086fbf1
+###
+GET {{endpoint}}/spaces?location=London
+###
+POST {{endpoint}}/spaces/
+Content-Type: application/json
+
+{
+    "location": "Adelaide",
+    "Name": "Best Location"
+}
+###
+PUT {{endpoint}}/spaces?SpaceId=73600115-77a2-42bb-8c53-d8329086fbf1
+Content-Type: application/json
+
+{
+    "location": "Tokyo"
+}
+###
+Delete {{endpoint}}/spaces?SpaceId=73600115-77a2-42bb-8c53-d8329086fbf1
+###
